@@ -11,7 +11,7 @@
     </div>
     <div class="product-info">
       <h1>{{product.title}}</h1>
-      <h2>Price: {{product.price}}</h2>
+      <h2>Price: {{product.price}}$</h2>
       <h2>  Rating:<va-rating v-model="product.rating.rate" /></h2>
       <div class="description">
         <h2>Description: </h2>
