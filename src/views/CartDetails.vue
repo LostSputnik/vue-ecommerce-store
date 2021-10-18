@@ -24,7 +24,7 @@
               <div class="col col-3" data-label="Price"><b>Total Price: </b>{{totalPrice}}$</div>
           </li>
       </ul>
-      <va-button outline to='/checkout-success'>Checkout</va-button>
+      <va-button outline to='/checkout-success' @click="handleCheckout">Checkout</va-button>
     </div>
   </div>
 </template>
@@ -39,10 +39,12 @@ export default {
         const store = useStore();
         const cartItems = computed(() => store.state.cart);
         const totalPrice = computed(() => store.state.cart.reduce((sum, current) => sum + current.price, 0));
+        const handleCheckout = (() => store.dispatch('handleCheckout'));
 
         return {
             cartItems,
-            totalPrice
+            totalPrice,
+            handleCheckout
         }
     } 
 }

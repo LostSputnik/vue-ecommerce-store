@@ -46,6 +46,10 @@ export default createStore({
     },
     setFilterValue: (state, value) => {
       state.filterValue = value;
+    },
+    handleCheckout: (state) => {
+      state.allProducts.forEach(el => el.inCart = false);
+      state.cart = [];
     }
   },
   actions: {
@@ -65,6 +69,9 @@ export default createStore({
     },
     setFilterValue({ commit }, value){
       commit('setFilterValue', value);
+    },
+    handleCheckout({ commit }){
+      commit('handleCheckout');
     }
   },
   modules: {
