@@ -24,7 +24,7 @@
               <div class="col col-3" data-label="Price"><b>Total Price: </b>{{totalPrice}}$</div>
           </li>
       </ul>
-      <va-button outline>Checkout</va-button>
+      <va-button outline to='/checkout-success'>Checkout</va-button>
     </div>
   </div>
 </template>

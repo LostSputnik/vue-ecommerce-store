@@ -13,8 +13,10 @@
       <h1>{{product.title}}</h1>
       <h2>Price: {{product.price}}</h2>
       <h2>  Rating:<va-rating v-model="product.rating.rate" /></h2>
-      <h2>Description: </h2>
-      <p>{{product.description}}</p>
+      <div class="description">
+        <h2>Description: </h2>
+        <p>{{product.description}}</p>
+      </div>
       <CartHandler :id="product.id"/>
 
     </div>
@@ -57,6 +59,7 @@ export default {
 
 .product-info{
   text-align: left;
+  line-height: 1.5;
   
 }
 .breadcrumb{
@@ -78,6 +81,10 @@ export default {
   font-size: 1.1rem;
   padding: 5px;
   margin-bottom: 20px;
+}
+
+.description{
+  padding-top: 10px;
 }
 
 </style>
